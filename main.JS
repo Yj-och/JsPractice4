@@ -1,33 +1,37 @@
 'use strict';
 
-function outputFixedLogs(){
-    console.log('========================')
-    console.log('現在持っているのタスク一覧')
-    console.log('========================')
-}
-
-const a = [
-    { content: '0 : ［内容］机を片付ける', genre: '［ジャンル］掃除 ' },
-    { content: '1 : ［内容］牛乳を買う', genre: '［ジャンル］買い物' },
-    { content: '2 : ［内容］散歩をする', genre: '［ジャンル］運動 ' },
-    { content: '3 :  [内容］寝る', genre: '［ジャンル］睡眠 ' },
+const outputFixedLogs = [
+    { content: '========================' },
+    { content: '現在持っているのタスク一覧' },
+    { content: '========================' },
 ];
 
-outputFixedLogs();
-console.log(a[0].content,a[0].genre)
-console.log(a[1].content,a[1].genre)
-console.log(a[2].content,a[2].genre)
+const tasks = [
+    { content: '［内容］机を片付ける', genre: '［ジャンル］掃除 ' },
+    { content: '［内容］牛乳を買う', genre: '［ジャンル］買い物' },
+    { content: '［内容］散歩をする', genre: '［ジャンル］運動 ' },
+];
 
-// const crick = true;
+
+const pushItem = [
+    { content: ' [内容］寝る', genre: '［ジャンル］睡眠 ' },
+];
+
+// outputFixedLogs();
+// console.log(tasks[0].content,tasks[0].genre)
+// console.log(tasks[1].content,tasks[1].genre)
+// console.log(tasks[2].content,tasks[2].genre)
+// const afterKey = prompt('タスクを入力してください');
+
+// let gets = get => tasks.push('内容］寝る', '［ジャンル］睡眠')
+// console.log(gets)
+outputFixedLogs.forEach((outputFixedLog) => {
+    console.log(`${outputFixedLog.content}`);
+});
+
+tasks.forEach((task, index) => {
+    console.log(`${index}: ${task.content} ${task.genre}`);
+});
+
 const str = prompt('「確認、追加、削除、終了」のいずれかを入力してください');
 const afterKey = prompt('タスクを入力してください');
-
-// if (str === '寝る') {
-//     (afterKey === '睡眠')
-//     outputFixedLogs();
-//     console.log(a[0].content, a[0].genre)
-//     console.log(a[1].content, a[1].genre)
-//     console.log(a[2].content, a[2].genre)
-//     console.log(a[3].content, a[3].genre)
-//     alert('タスクを追加しました')
-// }
