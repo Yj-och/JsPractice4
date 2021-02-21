@@ -13,18 +13,6 @@ const tasks = [
 ];
 
 
-const pushItem = [
-    { content: ' [内容］寝る', genre: '［ジャンル］睡眠 ' },
-];
-
-// outputFixedLogs();
-// console.log(tasks[0].content,tasks[0].genre)
-// console.log(tasks[1].content,tasks[1].genre)
-// console.log(tasks[2].content,tasks[2].genre)
-// const afterKey = prompt('タスクを入力してください');
-
-// let gets = get => tasks.push('内容］寝る', '［ジャンル］睡眠')
-// console.log(gets)
 outputFixedLogs.forEach((outputFixedLog) => {
     console.log(`${outputFixedLog.content}`);
 });
@@ -33,5 +21,22 @@ tasks.forEach((task, index) => {
     console.log(`${index}: ${task.content} ${task.genre}`);
 });
 
+tasks.push({ content: '[内容］寝る', genre: '［ジャンル］睡眠 ' });
+
+const a = b => tasks.push({ content: '[内容］寝る', genre: '［ジャンル］睡眠 ' });
+
+
 const str = prompt('「確認、追加、削除、終了」のいずれかを入力してください');
 const afterKey = prompt('タスクを入力してください');
+if (afterKey) {
+    alert('タスクが入力されました');
+}
+
+outputFixedLogs.forEach((outputFixedLog) => {
+    console.log(`${outputFixedLog.content}`);
+});
+
+tasks.forEach((task, index) => {
+    console.log(`${index}: ${task.content} ${task.genre}`);
+});
+
