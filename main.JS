@@ -1,10 +1,10 @@
 'use strict';
 
-const logs = [
-    '========================',
-    '現在持っているのタスク一覧',
-    '========================'
-]
+function logs()  {
+    console.log('========================');
+    console.log('現在持っているのタスク一覧');
+    console.log('========================');
+}
 
 const tasks = [
     { content: '机を片付ける', genre: '掃除 ' },
@@ -12,10 +12,7 @@ const tasks = [
     { content: '散歩をする', genre: '運動' },
 ];
 
-function fixed(log) {
-    console.log(log);
-}
-logs.forEach(fixed);
+logs();
 
 tasks.forEach((task, index) => {
     console.log(`${index}: ［内容］${task.content} ［ジャンル］${task.genre}`);
@@ -31,7 +28,7 @@ tasks.push({ content: taskKey1, genre: junreKey });
 
 alert('タスクを入力しました')
 
-logs.forEach(fixed);
+logs();
 
 tasks.forEach((task, index) => {
     console.log(`${index}: ［内容］${task.content} ［ジャンル］${task.genre}`);
